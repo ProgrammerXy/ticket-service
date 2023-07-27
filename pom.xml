@@ -4,14 +4,7 @@
   <artifactId>jeecg-boot-parent</artifactId>
   <version>3.5.3</version>
   <packaging>pom</packaging>
-  <name>JEECG BOOT ${project.version} </name>
-
-	<developers>
-		<developer>
-			<name>北京敲敲云科技有限公司</name>
-			<email>jeecgos@163.com</email>
-		</developer>
-	</developers>
+  <name>Ticket Service</name>
 
 	<scm>
 		<connection>http://www.jeecg.com</connection>
