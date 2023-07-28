@@ -8,7 +8,7 @@ import org.jeecgframework.codegenerate.window.CodeWindow;
  * @site www.jeecg.com
  * @Version:V1.0.1
  */
-public class JeecgOneGUI {
+public class TicketOneGUI {
 
 	/** 使用手册： https://help.jeecg.com/vue3/codegen/gui.html */
     public static void main(String[] args) {

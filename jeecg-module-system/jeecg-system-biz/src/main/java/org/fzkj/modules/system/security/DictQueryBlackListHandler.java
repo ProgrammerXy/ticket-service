@@ -1,9 +1,8 @@
 
 package org.fzkj.modules.system.security;
 
-import org.fzkj.common.util.oConvertUtils;
-import org.fzkj.common.util.security.AbstractQueryBlackListHandler;
 import org.fzkj.common.constant.SymbolConstant;
+import org.fzkj.common.util.oConvertUtils;
 import org.fzkj.common.util.security.AbstractQueryBlackListHandler;
 import org.springframework.stereotype.Component;
 

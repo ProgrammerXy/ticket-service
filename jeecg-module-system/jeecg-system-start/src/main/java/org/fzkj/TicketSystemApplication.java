@@ -7,7 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.env.Environment;
 
 import java.net.InetAddress;
@@ -18,8 +17,7 @@ import java.net.UnknownHostException;
  * 报错提醒: 未集成mongo报错，可以打开启动类上面的注释 exclude={MongoAutoConfiguration.class}
  */
 @Slf4j
-@SpringBootApplication(scanBasePackages = {"org.fzkj"})
-//@EnableAutoConfiguration(exclude={MongoAutoConfiguration.class})
+@SpringBootApplication(scanBasePackages = {"org.jeecg","org.fzkj"})
 public class TicketSystemApplication extends SpringBootServletInitializer {
 
     @Override
