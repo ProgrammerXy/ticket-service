@@ -24,10 +24,10 @@
                 </exclusion>
             </exclusions>-->
         </dependency>
-        <!-- jeecg-system-biz依赖 -->
+        <!-- fzkj-system-biz依赖 -->
         <dependency>
             <groupId>org.jeecgframework.boot</groupId>
-            <artifactId>jeecg-system-biz</artifactId>
+            <artifactId>fzkj-system-biz</artifactId>
             <!-- 排除demo模块，demo模块采用微服务独立启动 -->
             <exclusions>
                 <exclusion>

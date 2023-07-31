@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.jeecgframework.boot</groupId>
-  <artifactId>jeecg-boot-parent</artifactId>
+  <artifactId>ticket-service</artifactId>
   <version>3.5.3</version>
   <packaging>pom</packaging>
   <name>Ticket Service</name>
@@ -68,9 +68,9 @@
 	</properties>
 
 	<modules>
-        <module>jeecg-boot-base-core</module>
-        <module>jeecg-module-demo</module>
-        <module>jeecg-module-system</module>
+        <module>fzkj-boot-base-core</module>
+        <module>fzkj-module-demo</module>
+        <module>fzkj-module-system</module>
 	</modules>
 
 	<repositories>
@@ -155,8 +155,8 @@
 			<!-- system 模块-->
 			<dependency>
 				<groupId>org.jeecgframework.boot</groupId>
-				<artifactId>jeecg-system-biz</artifactId>
-				<version>${jeecgboot.version}</version>
+				<artifactId>fzkj-system-biz</artifactId>
+				<version>3.5.3</version>
 			</dependency>
 
 			<!-- jeecg tools -->
@@ -168,8 +168,8 @@
 			<!-- jeecg core -->
 			<dependency>
 				<groupId>org.jeecgframework.boot</groupId>
-				<artifactId>jeecg-boot-base-core</artifactId>
-				<version>${jeecgboot.version}</version>
+				<artifactId>fzkj-boot-base-core</artifactId>
+				<version>3.5.3</version>
 			</dependency>
 			<!-- system 单体 api -->
 			<dependency>
