@@ -21,6 +21,7 @@ import org.fzkj.modules.system.service.ISysThirdAccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.Date;
 import java.util.List;
 
@@ -37,7 +38,7 @@ public class SysThirdAccountServiceImpl extends ServiceImpl<SysThirdAccountMappe
     @Autowired
     private  SysThirdAccountMapper sysThirdAccountMapper;
     
-    @Autowired
+    @Resource
     private SysUserMapper sysUserMapper;
     @Autowired
     private SysRoleMapper sysRoleMapper;

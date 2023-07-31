@@ -47,6 +47,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -69,7 +70,7 @@ public class ThirdAppDingtalkServiceImpl implements IThirdAppService {
     ThirdAppConfig thirdAppConfig;
     @Autowired
     private ISysDepartService sysDepartService;
-    @Autowired
+    @Resource
     private SysUserMapper userMapper;
     @Autowired
     private ISysThirdAccountService sysThirdAccountService;

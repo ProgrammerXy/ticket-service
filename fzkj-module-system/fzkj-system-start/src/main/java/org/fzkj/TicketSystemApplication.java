@@ -17,7 +17,7 @@ import java.net.UnknownHostException;
  * 报错提醒: 未集成mongo报错，可以打开启动类上面的注释 exclude={MongoAutoConfiguration.class}
  */
 @Slf4j
-@SpringBootApplication(scanBasePackages = {"org.fzkj"})
+@SpringBootApplication(scanBasePackages = {"org.fzkj.**"})
 public class TicketSystemApplication extends SpringBootServletInitializer {
 
     @Override

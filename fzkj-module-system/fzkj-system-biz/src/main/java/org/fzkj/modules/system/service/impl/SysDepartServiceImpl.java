@@ -30,6 +30,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.annotation.Resource;
 import java.util.*;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
@@ -55,7 +56,7 @@ public class SysDepartServiceImpl extends ServiceImpl<SysDepartMapper, SysDepart
 	private SysDepartRolePermissionMapper departRolePermissionMapper;
 	@Autowired
 	private SysDepartRoleUserMapper departRoleUserMapper;
-	@Autowired
+	@Resource
 	private SysUserMapper sysUserMapper;
 	@Autowired
 	private SysDepartMapper departMapper;

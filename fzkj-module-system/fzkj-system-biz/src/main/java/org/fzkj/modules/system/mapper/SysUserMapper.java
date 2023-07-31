@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.Constants;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.fzkj.modules.system.entity.SysUser;
 import org.fzkj.modules.system.model.SysUserSysDepartModel;
@@ -21,6 +22,7 @@ import java.util.List;
  * @since 2018-12-20
  */
 
+@Mapper
 public interface SysUserMapper extends BaseMapper<SysUser> {
     /**
      * 通过用户账号查询用户信息
