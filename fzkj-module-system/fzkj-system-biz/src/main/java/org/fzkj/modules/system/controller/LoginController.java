@@ -27,7 +27,7 @@ import org.fzkj.modules.system.service.*;
 import org.fzkj.modules.system.service.impl.SysBaseApiImpl;
 import org.fzkj.modules.system.util.RandImageUtil;
 import org.jeecg.common.constant.CacheConstant;
-import org.jeecg.common.util.RedisUtil;
+import org.fzkj.config.redis.RedisUtil;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -55,7 +55,8 @@ public class LoginController {
     private SysBaseApiImpl sysBaseApi;
     @Autowired
     private ISysLogService logService;
-    private static RedisUtil redisUtil;
+    @Autowired
+    private RedisUtil redisUtil;
     @Autowired
     private ISysDepartService sysDepartService;
     @Autowired
