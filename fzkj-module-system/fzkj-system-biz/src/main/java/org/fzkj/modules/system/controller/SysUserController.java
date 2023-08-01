@@ -33,7 +33,7 @@ import org.fzkj.common.system.query.QueryGenerator;
 import org.fzkj.common.system.util.JwtUtil;
 import org.fzkj.common.system.vo.LoginUser;
 import org.fzkj.common.util.ImportExcelUtil;
-import org.jeecg.common.util.RedisUtil;
+import org.fzkj.config.redis.RedisUtil;
 import org.fzkj.common.util.SqlInjectionUtil;
 import org.fzkj.config.mybatis.MybatisPlusSaasConfig;
 import org.fzkj.modules.base.service.BaseCommonService;

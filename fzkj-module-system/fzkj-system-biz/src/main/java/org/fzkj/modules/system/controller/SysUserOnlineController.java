@@ -11,7 +11,7 @@ import org.jeecg.common.constant.CacheConstant;
 import org.fzkj.common.constant.CommonConstant;
 import org.fzkj.common.system.util.JwtUtil;
 import org.fzkj.common.system.vo.LoginUser;
-import org.jeecg.common.util.RedisUtil;
+import org.fzkj.config.redis.RedisUtil;
 import org.fzkj.modules.base.service.BaseCommonService;
 import org.fzkj.modules.system.service.ISysUserService;
 import org.fzkj.modules.system.service.impl.SysBaseApiImpl;
@@ -40,7 +40,7 @@ public class SysUserOnlineController {
     @Autowired
     private RedisUtil redisUtil;
     @Autowired
-    public RedisTemplate redisTemplate;
+    public RedisTemplate<String,Object> redisTemplate;
     @Autowired
     public ISysUserService userService;
     @Autowired

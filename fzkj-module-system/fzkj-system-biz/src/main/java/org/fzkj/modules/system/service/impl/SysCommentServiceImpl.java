@@ -11,7 +11,7 @@ import org.fzkj.common.constant.enums.MessageTypeEnum;
 import org.jeecg.common.exception.JeecgBootException;
 import org.fzkj.common.system.api.ISysBaseAPI;
 import org.fzkj.common.util.CommonUtils;
-import org.jeecg.common.util.RedisUtil;
+import org.fzkj.config.redis.RedisUtil;
 import org.fzkj.common.util.oConvertUtils;
 import org.fzkj.modules.system.entity.SysComment;
 import org.fzkj.modules.system.entity.SysFiles;

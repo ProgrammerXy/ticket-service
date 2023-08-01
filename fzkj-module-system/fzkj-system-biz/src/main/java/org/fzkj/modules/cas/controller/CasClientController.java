@@ -9,7 +9,7 @@ import org.apache.commons.lang.StringUtils;
 import org.fzkj.common.api.vo.Result;
 import org.fzkj.common.constant.CommonConstant;
 import org.fzkj.common.system.util.JwtUtil;
-import org.jeecg.common.util.RedisUtil;
+import org.fzkj.config.redis.RedisUtil;
 import org.fzkj.modules.cas.util.CasServiceUtil;
 import org.fzkj.modules.cas.util.XmlUtils;
 import org.fzkj.modules.system.entity.SysDepart;

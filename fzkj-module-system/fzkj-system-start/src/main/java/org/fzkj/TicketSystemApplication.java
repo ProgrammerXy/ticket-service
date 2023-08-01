@@ -2,6 +2,7 @@ package org.fzkj;
 
 import lombok.extern.slf4j.Slf4j;
 import org.fzkj.common.util.oConvertUtils;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -18,6 +19,7 @@ import java.net.UnknownHostException;
  */
 @Slf4j
 @SpringBootApplication(scanBasePackages = {"org.fzkj.**"})
+@MapperScan("org.fzkj.modules.**.mapper")
 public class TicketSystemApplication extends SpringBootServletInitializer {
 
     @Override

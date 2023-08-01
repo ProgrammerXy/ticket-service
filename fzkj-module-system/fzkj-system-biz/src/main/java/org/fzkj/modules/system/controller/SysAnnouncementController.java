@@ -22,7 +22,7 @@ import org.fzkj.common.constant.WebsocketConst;
 import org.fzkj.common.system.query.QueryGenerator;
 import org.fzkj.common.system.util.JwtUtil;
 import org.fzkj.common.system.vo.LoginUser;
-import org.jeecg.common.util.RedisUtil;
+import org.fzkj.config.redis.RedisUtil;
 import org.fzkj.config.mybatis.MybatisPlusSaasConfig;
 import org.fzkj.modules.message.enums.RangeDateEnum;
 import org.fzkj.modules.message.websocket.WebSocket;
@@ -81,7 +81,6 @@ public class SysAnnouncementController {
     @Autowired
     private SysBaseApiImpl sysBaseApi;
     @Autowired
-    @Lazy
     private RedisUtil redisUtil;
 
     /**

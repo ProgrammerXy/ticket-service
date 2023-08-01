@@ -26,7 +26,7 @@ import org.fzkj.common.system.vo.DictModel;
 import org.fzkj.common.system.vo.DictQuery;
 import org.fzkj.common.system.vo.LoginUser;
 import org.fzkj.common.util.ImportExcelUtil;
-import org.jeecg.common.util.RedisUtil;
+import org.fzkj.config.redis.RedisUtil;
 import org.fzkj.common.util.SqlInjectionUtil;
 import org.fzkj.config.mybatis.MybatisPlusSaasConfig;
 import org.fzkj.modules.system.security.DictQueryBlackListHandler;

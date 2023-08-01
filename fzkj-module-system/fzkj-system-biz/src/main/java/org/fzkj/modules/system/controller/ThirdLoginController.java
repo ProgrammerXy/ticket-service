@@ -18,7 +18,7 @@ import org.fzkj.modules.system.entity.SysUser;
 import org.fzkj.modules.system.model.ThirdLoginModel;
 import org.fzkj.common.constant.CommonConstant;
 import org.fzkj.common.system.util.JwtUtil;
-import org.jeecg.common.util.RedisUtil;
+import org.fzkj.config.redis.RedisUtil;
 import org.fzkj.config.thirdapp.ThirdAppConfig;
 import org.fzkj.config.thirdapp.ThirdAppTypeItemVo;
 import org.fzkj.modules.base.service.BaseCommonService;

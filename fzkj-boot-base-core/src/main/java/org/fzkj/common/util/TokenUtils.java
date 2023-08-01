@@ -10,7 +10,7 @@ import org.fzkj.common.desensitization.util.SensitiveInfoUtil;
 import org.fzkj.common.exception.JeecgBoot401Exception;
 import org.fzkj.common.system.util.JwtUtil;
 import org.fzkj.common.system.vo.LoginUser;
-import org.jeecg.common.util.RedisUtil;
+import org.fzkj.config.redis.RedisUtil;
 
 import javax.servlet.http.HttpServletRequest;
 

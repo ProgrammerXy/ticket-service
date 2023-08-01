@@ -4,15 +4,15 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.ObjectUtils;
 import org.fzkj.common.api.dto.message.MessageDTO;
-import org.fzkj.common.util.oConvertUtils;
-import org.fzkj.modules.system.entity.SysUser;
 import org.fzkj.common.constant.CommonConstant;
 import org.fzkj.common.system.util.JwtUtil;
-import org.jeecg.common.util.RedisUtil;
 import org.fzkj.common.util.SpringContextUtils;
+import org.fzkj.common.util.oConvertUtils;
 import org.fzkj.config.StaticConfig;
 import org.fzkj.modules.message.handle.ISendMsgHandle;
+import org.fzkj.modules.system.entity.SysUser;
 import org.fzkj.modules.system.mapper.SysUserMapper;
+import org.fzkj.config.redis.RedisUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
@@ -47,8 +47,7 @@ public class EmailSendMsgHandle implements ISendMsgHandle {
     /**
      * 真实姓名变量
      */
-    private static final String  realNameExp = "{REALNAME}";
-
+    private static final String realNameExp = "{REALNAME}";
 
 
     @Override
@@ -57,7 +56,7 @@ public class EmailSendMsgHandle implements ISendMsgHandle {
         MimeMessage message = mailSender.createMimeMessage();
         MimeMessageHelper helper = null;
         //update-begin-author：taoyan date:20200811 for:配置类数据获取
-        if(oConvertUtils.isEmpty(emailFrom)){
+        if (oConvertUtils.isEmpty(emailFrom)) {
             StaticConfig staticConfig = SpringContextUtils.getBean(StaticConfig.class);
             log.info("邮件配置 emailFrom：" + emailFrom);
             setEmailFrom(staticConfig.getEmailFrom());
@@ -84,13 +83,13 @@ public class EmailSendMsgHandle implements ISendMsgHandle {
         List<SysUser> list = sysUserMapper.selectList(query);
         String content = messageDTO.getContent();
         String title = messageDTO.getTitle();
-        for(SysUser user: list){
+        for (SysUser user : list) {
             String email = user.getEmail();
             if (ObjectUtils.isEmpty(email)) {
                 continue;
             }
-            content=replaceContent(user,content);
-            log.info("邮件内容："+ content);
+            content = replaceContent(user, content);
+            log.info("邮件内容：" + content);
             sendMsg(email, title, content);
         }
         //发送给抄送人
@@ -99,11 +98,12 @@ public class EmailSendMsgHandle implements ISendMsgHandle {
 
     /**
      * 发送邮件给抄送人
+     *
      * @param messageDTO
      */
     public void sendMessageToCopyUser(MessageDTO messageDTO) {
         String copyToUser = messageDTO.getCopyToUser();
-        if(ObjectUtils.isNotEmpty(copyToUser)) {
+        if (ObjectUtils.isNotEmpty(copyToUser)) {
             LambdaQueryWrapper<SysUser> query = new LambdaQueryWrapper<SysUser>().in(SysUser::getUsername, copyToUser.split(","));
             List<SysUser> list = sysUserMapper.selectList(query);
             String content = messageDTO.getContent();
@@ -114,7 +114,7 @@ public class EmailSendMsgHandle implements ISendMsgHandle {
                 if (ObjectUtils.isEmpty(email)) {
                     continue;
                 }
-                content=replaceContent(user,content);
+                content = replaceContent(user, content);
                 log.info("邮件内容：" + content);
                 JavaMailSender mailSender = (JavaMailSender) SpringContextUtils.getBean("mailSender");
                 MimeMessage message = mailSender.createMimeMessage();
@@ -142,13 +142,14 @@ public class EmailSendMsgHandle implements ISendMsgHandle {
 
     /**
      * 替换邮件内容变量
+     *
      * @param user
      * @param content
      * @return
      */
-    private String replaceContent(SysUser user,String content){
+    private String replaceContent(SysUser user, String content) {
         if (content.indexOf(realNameExp) > 0) {
-            content = content.replace("$"+realNameExp,user.getRealname()).replace(realNameExp, user.getRealname());
+            content = content.replace("$" + realNameExp, user.getRealname()).replace(realNameExp, user.getRealname());
         }
         if (content.indexOf(CommonConstant.LOGIN_TOKEN) > 0) {
             String token = getToken(user);
@@ -163,6 +164,7 @@ public class EmailSendMsgHandle implements ISendMsgHandle {
 
     /**
      * 获取token
+     *
      * @param user
      * @return
      */

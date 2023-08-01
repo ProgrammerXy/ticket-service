@@ -17,7 +17,7 @@ import org.jeecg.common.constant.CacheConstant;
 import org.fzkj.common.constant.CommonConstant;
 import org.fzkj.common.system.util.JwtUtil;
 import org.fzkj.common.system.vo.LoginUser;
-import org.jeecg.common.util.RedisUtil;
+import org.fzkj.config.redis.RedisUtil;
 import org.fzkj.common.util.SpringContextUtils;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Component;

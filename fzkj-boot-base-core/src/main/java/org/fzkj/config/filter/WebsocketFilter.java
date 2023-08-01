@@ -4,7 +4,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.fzkj.common.api.CommonAPI;
 import org.fzkj.common.util.TokenUtils;
 import org.fzkj.common.util.oConvertUtils;
-import org.jeecg.common.util.RedisUtil;
+import org.fzkj.config.redis.RedisUtil;
 import org.fzkj.common.util.SpringContextUtils;
 
 import javax.servlet.*;

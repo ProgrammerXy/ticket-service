@@ -31,10 +31,10 @@
 			<artifactId>jeewx-api</artifactId>
 		</dependency>
 		<!-- 积木报表 -->
-		<dependency>
-			<groupId>org.jeecgframework.jimureport</groupId>
-			<artifactId>jimureport-spring-boot-starter</artifactId>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>org.jeecgframework.jimureport</groupId>-->
+<!--			<artifactId>jimureport-spring-boot-starter</artifactId>-->
+<!--		</dependency>-->
 		<dependency>
 			<groupId>org.jeecgframework.boot</groupId>
 			<artifactId>drag-free</artifactId>
